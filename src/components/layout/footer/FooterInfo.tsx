@@ -16,7 +16,7 @@ import { defaultLinkSections } from './config'
 import { GatewayInfo } from './GatewayInfo'
 import { OwnerName } from './OwnerName'
 
-const isVercelEnv = !!process.env.NEXT_PUBLIC_VERCEL_ENV
+// const isVercelEnv = !!process.env.NEXT_PUBLIC_VERCEL_ENV
 export const FooterInfo = () => {
   return (
     <>
@@ -39,7 +39,6 @@ export const FooterInfo = () => {
     </>
   )
 }
-
 
 const FooterLinkSection = async () => {
   const { footer } = (await fetchAggregationData()).theme
@@ -147,28 +146,28 @@ const PoweredBy: Component = ({ className }) => {
   )
 }
 
- type VisitorGeolocation = {
-   country: string
-   city?: string
-   flag: string
- }
+// type VisitorGeolocation = {
+//   country: string
+//   city?: string
+//   flag: string
+// }
 const FooterBottom = async () => {
-   let lastVisitor: VisitorGeolocation | undefined = undefined
-   if (process.env.VERCEL_ENV === 'production') {
-     const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
-       kvKeys.lastVisitor,
-       kvKeys.currentVisitor,
-     )
-     lastVisitor = lv
-     await redis.set(kvKeys.lastVisitor, cv)
-   }
+  // let lastVisitor: VisitorGeolocation | undefined = undefined
+  // if (process.env.VERCEL_ENV === 'production') {
+  //   const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
+  //     kvKeys.lastVisitor,
+  //     kvKeys.currentVisitor,
+  //   )
+  //   lastVisitor = lv
+  //   await redis.set(kvKeys.lastVisitor, cv)
+  // }
 
-   if (isDev) {
-     lastVisitor = {
-       country: 'US',
-       flag: '🇺🇸',
-     }
-   }
+  // if (isDev) {
+  //   lastVisitor = {
+  //     country: 'US',
+  //     flag: '🇺🇸',
+  //   }
+  // }
 
   const queryClient = getQueryClient()
   const data = await queryClient.fetchQuery(queries.aggregation.root())
@@ -222,8 +221,7 @@ const FooterBottom = async () => {
           <Divider className="hidden md:inline" />
         )}
         <GatewayInfo />
-        {/* 将这段代码启用 */}
-        {!!lastVisitor && (
+        {/* {!!lastVisitor && (
           <>
             <Divider />
             <span>
@@ -234,7 +232,7 @@ const FooterBottom = async () => {
                 .join(', ')}
             </span>
           </>
-        )}
+        )} */}
       </div>
     </div>
   )
