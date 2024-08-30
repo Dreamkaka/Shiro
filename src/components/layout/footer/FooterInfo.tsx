@@ -16,18 +16,27 @@ import { defaultLinkSections } from './config'
 import { GatewayInfo } from './GatewayInfo'
 import { OwnerName } from './OwnerName'
 
-// const isVercelEnv = !!process.env.NEXT_PUBLIC_VERCEL_ENV
+const isVercelEnv = !!process.env.NEXT_PUBLIC_VERCEL_ENV
 export const FooterInfo = () => {
   return (
     <>
       <div className="relative">
         <FooterLinkSection />
-        { {isVercelEnv && (
+        {isVercelEnv && (
           <div className="absolute top-0 hidden lg:-right-8 lg:block">
             <VercelPoweredBy />
           </div>
-        )} }
+        )}
       </div>
+      <FooterBottom />
+      {isVercelEnv && (
+        <div className="mt-6 flex justify-center lg:hidden">
+          <VercelPoweredBy />
+        </div>
+      )}
+    </>
+  );
+}
 
       <FooterBottom />
 
@@ -221,17 +230,19 @@ const PoweredBy: Component = ({ className }) => {
           <Divider className="hidden md:inline" />
         )}
         <GatewayInfo />
-        {{!!lastVisitor && (
-          <>
-            <Divider />
-            <span>
-              最近访客来自&nbsp;
-              {lastVisitor.flag}&nbsp;
-              {[lastVisitor.city, lastVisitor.country]
-                .filter(Boolean)
-                .join(', ')}
-            </span>
-          </>
+      {lastVisitor && (
+       <>
+       <Divider />
+       <span>
+       最近访客来自&nbsp;
+       {lastVisitor.flag}&nbsp;
+       {[lastVisitor.city, lastVisitor.country]
+         .filter(Boolean)
+         .join(', ')}
+       </span>
+    </>
+    )}
+
         )} }
       </div>
     </div>
