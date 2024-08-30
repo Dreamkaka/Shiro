@@ -22,32 +22,26 @@ export const FooterInfo = () => {
     <>
       <div className="relative">
         <FooterLinkSection />
+        {/* enable */}
         {isVercelEnv && (
           <div className="absolute top-0 hidden lg:-right-8 lg:block">
             <VercelPoweredBy />
           </div>
         )}
       </div>
+
       <FooterBottom />
+
+      {/* enable */}
       {isVercelEnv && (
         <div className="mt-6 flex justify-center lg:hidden">
           <VercelPoweredBy />
         </div>
       )}
     </>
-  );
-}
-
-      <FooterBottom />
-
-      { {isVercelEnv && (
-        <div className="mt-6 flex justify-center lg:hidden">
-          <VercelPoweredBy />
-        </div>
-      )} }
-    </>
   )
 }
+
 
 const FooterLinkSection = async () => {
   const { footer } = (await fetchAggregationData()).theme
@@ -160,7 +154,7 @@ const PoweredBy: Component = ({ className }) => {
    city?: string
    flag: string
  }
-   const FooterBottom = async () => {
+const FooterBottom = async () => {
    let lastVisitor: VisitorGeolocation | undefined = undefined
    if (process.env.VERCEL_ENV === 'production') {
      const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
@@ -230,20 +224,19 @@ const PoweredBy: Component = ({ className }) => {
           <Divider className="hidden md:inline" />
         )}
         <GatewayInfo />
-      {lastVisitor && (
-       <>
-       <Divider />
-       <span>
-       最近访客来自&nbsp;
-       {lastVisitor.flag}&nbsp;
-       {[lastVisitor.city, lastVisitor.country]
-         .filter(Boolean)
-         .join(', ')}
-       </span>
-    </>
-    )}
-
-        )} }
+        {/* 将这段代码启用 */}
+        {!!lastVisitor && (
+          <>
+            <Divider />
+            <span>
+              最近访客来自&nbsp;
+              {lastVisitor.flag}&nbsp;
+              {[lastVisitor.city, lastVisitor.country]
+                .filter(Boolean)
+                .join(', ')}
+            </span>
+          </>
+        )}
       </div>
     </div>
   )
