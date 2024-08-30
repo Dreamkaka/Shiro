@@ -22,22 +22,20 @@ export const FooterInfo = () => {
     <>
       <div className="relative">
         <FooterLinkSection />
-        {/* enable */}
-        {isVercelEnv && (
+        {/* {isVercelEnv && (
           <div className="absolute top-0 hidden lg:-right-8 lg:block">
             <VercelPoweredBy />
           </div>
-        )}
+        )} */}
       </div>
 
       <FooterBottom />
 
-      {/* enable */}
-      {isVercelEnv && (
+      {/* {isVercelEnv && (
         <div className="mt-6 flex justify-center lg:hidden">
           <VercelPoweredBy />
         </div>
-      )}
+      )} */}
     </>
   )
 }
