@@ -22,20 +22,20 @@ export const FooterInfo = () => {
     <>
       <div className="relative">
         <FooterLinkSection />
-        {/* {isVercelEnv && (
+        { {isVercelEnv && (
           <div className="absolute top-0 hidden lg:-right-8 lg:block">
             <VercelPoweredBy />
           </div>
-        )} */}
+        )} }
       </div>
 
       <FooterBottom />
 
-      {/* {isVercelEnv && (
+      { {isVercelEnv && (
         <div className="mt-6 flex justify-center lg:hidden">
           <VercelPoweredBy />
         </div>
-      )} */}
+      )} }
     </>
   )
 }
@@ -146,28 +146,28 @@ const PoweredBy: Component = ({ className }) => {
   )
 }
 
-// type VisitorGeolocation = {
-//   country: string
-//   city?: string
-//   flag: string
-// }
-const FooterBottom = async () => {
-  // let lastVisitor: VisitorGeolocation | undefined = undefined
-  // if (process.env.VERCEL_ENV === 'production') {
-  //   const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
-  //     kvKeys.lastVisitor,
-  //     kvKeys.currentVisitor,
-  //   )
-  //   lastVisitor = lv
-  //   await redis.set(kvKeys.lastVisitor, cv)
-  // }
+ type VisitorGeolocation = {
+   country: string
+   city?: string
+   flag: string
+ }
+   const FooterBottom = async () => {
+   let lastVisitor: VisitorGeolocation | undefined = undefined
+   if (process.env.VERCEL_ENV === 'production') {
+     const [lv, cv] = await redis.mget<VisitorGeolocation[]>(
+       kvKeys.lastVisitor,
+       kvKeys.currentVisitor,
+     )
+     lastVisitor = lv
+     await redis.set(kvKeys.lastVisitor, cv)
+   }
 
-  // if (isDev) {
-  //   lastVisitor = {
-  //     country: 'US',
-  //     flag: '🇺🇸',
-  //   }
-  // }
+   if (isDev) {
+     lastVisitor = {
+       country: 'US',
+       flag: '🇺🇸',
+     }
+   }
 
   const queryClient = getQueryClient()
   const data = await queryClient.fetchQuery(queries.aggregation.root())
@@ -221,7 +221,7 @@ const FooterBottom = async () => {
           <Divider className="hidden md:inline" />
         )}
         <GatewayInfo />
-        {/* {!!lastVisitor && (
+        {{!!lastVisitor && (
           <>
             <Divider />
             <span>
@@ -232,7 +232,7 @@ const FooterBottom = async () => {
                 .join(', ')}
             </span>
           </>
-        )} */}
+        )} }
       </div>
     </div>
   )
