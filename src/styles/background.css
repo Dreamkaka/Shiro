@@ -1,0 +1,8 @@
+/* styles/global.css */
+.custom-background {
+    background-image: url('https://pximg.xiaohan-kaka.me/img-original/img/2024/07/07/07/37/29/120309702_p0.jpg');
+    background-size: cover; /* 背景图像完全覆盖容器 */
+    background-position: center; /* 背景居中 */
+    background-repeat: no-repeat; /* 不重复背景 */
+  }
+  
