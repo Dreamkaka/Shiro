@@ -201,9 +201,11 @@ const FooterBottom = async () => {
           </SubscribeTextButton>
         </span>
         <span className="mt-3 block md:mt-0 md:inline">
-          Programming for the charm of words, coding to draw the magnificent scenery.
+          Programming for the charm of words, coding to draw the magnificent
+          scenery.
         </span>
       </p>
+
       <div>
         <PoweredBy className="my-3 block md:my-0 md:inline" />
         {icp && (
@@ -220,7 +222,9 @@ const FooterBottom = async () => {
         ) : (
           <Divider className="hidden md:inline" />
         )}
+
         <GatewayInfo />
+
         {/* {!!lastVisitor && (
           <>
             <Divider />

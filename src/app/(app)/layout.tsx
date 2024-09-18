@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import { PublicEnvScript } from 'next-runtime-env'
 import type { PropsWithChildren } from 'react'
@@ -140,8 +141,7 @@ export default async function RootLayout(props: PropsWithChildren) {
           className={`${sansFont.variable} ${serifFont.variable} m-0 h-full p-0 font-sans`}
         >
           <div className="center flex h-screen">
-            初始数据的获取失败，请检查 API
-            服务器是否正常运行。接口请求错误信息：
+            数据获取失败啦，请检查api服务是否正常qaq;接口请求错误信息：
             <br />
             {data.message}
           </div>
@@ -160,6 +160,7 @@ export default async function RootLayout(props: PropsWithChildren) {
           <Global />
           <SayHi />
           <HydrationEndDetector />
+
           <AccentColorStyleInjector color={themeConfig.config.color} />
 
           <link
@@ -190,6 +191,7 @@ export default async function RootLayout(props: PropsWithChildren) {
 
             <TocAutoScroll />
             <SearchPanelWithHotKey />
+            <SpeedInsights />
             <Analyze />
             <SyncServerTime />
             <ToastContainer />
@@ -218,12 +220,15 @@ const SayHi = () => {
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #39C5BB;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )
+      console.log(`Goodbye world`)
 
       const motto = `
 This Personal Space Powered By Mix Space.
 Written by TypeScript, Coding with Love.
 --------
 Stay hungry. Stay foolish. --Steve Jobs
+--------
+用代码表达言语的魅力，用代码书写山河的壮丽。 --hitokoto
 `
 
       if (document.firstChild?.nodeType !== Node.COMMENT_NODE) {
