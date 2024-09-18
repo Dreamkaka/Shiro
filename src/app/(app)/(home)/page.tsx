@@ -18,6 +18,7 @@ import {
   MdiLightbulbOn20,
   RMixPlanet,
 } from '~/components/icons/menu-collection'
+import { Hitokoto } from '~/components/modules/dashboard/home'
 import { isSupportIcon, SocialIcon } from '~/components/modules/home/SocialIcon'
 import { usePresentSubscribeModal } from '~/components/modules/subscribe'
 import { StyledButton } from '~/components/ui/button'
@@ -141,7 +142,6 @@ const Hero = () => {
           >
             <span className="opacity-80">{description}</span>
           </BottomToUpTransitionView>
-
           <ul className="center mx-[60px] mt-8 flex flex-wrap gap-6 lg:mx-auto lg:mt-28 lg:justify-start lg:gap-4">
             {Object.entries(socialIds || noopObj).map(
               ([type, id]: any, index) => {
@@ -186,7 +186,9 @@ const Hero = () => {
             'center text-neutral-800/80 dark:text-neutral-200/80',
           )}
         >
-          <small className="text-center">远方未必远，未来一定来</small>
+          <small className="text-center">
+            <Hitokoto />
+          </small>
           <span className="mt-8 animate-bounce">
             <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
           </span>

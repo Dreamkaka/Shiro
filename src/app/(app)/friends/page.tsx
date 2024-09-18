@@ -264,7 +264,7 @@ const ApplyLinkInfo: FC = () => {
   })
   const { present } = useModalStack()
   if (!canApply) {
-    return <NotSupport className="mt-20" text="主人禁止了申请友链。" />
+    return <NotSupport className="mt-20" text="主人禁止了申请友链哦。" />
   }
   return (
     <>
@@ -322,7 +322,7 @@ const FormModal = () => {
         },
         {
           validator: (value: string) => value.length <= 20,
-          message: '昵称不能超过20个字符',
+          message: '昵称不能超过20个字符噢',
         },
       ],
     },
@@ -382,7 +382,7 @@ const FormModal = () => {
         },
         {
           validator: (value: string) => value.length <= 50,
-          message: '一句话描述不要超过50个字啦',
+          message: '描述不要超过50个字啦',
         },
       ],
     },
