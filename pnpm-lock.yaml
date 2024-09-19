@@ -133,7 +133,7 @@ importers:
         version: 0.10.0
       '@vercel/speed-insights':
         specifier: ^1.0.12
-        version: 1.0.12(next@14.2.11(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        version: 1.0.12(next@14.2.12(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       bypass-vue-devtools:
         specifier: 0.0.6
         version: 0.0.6
@@ -8847,9 +8847,9 @@ snapshots:
     transitivePeerDependencies:
       - utf-8-validate
 
-  '@vercel/speed-insights@1.0.12(next@14.2.11(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@vercel/speed-insights@1.0.12(next@14.2.12(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     optionalDependencies:
-      next: 14.2.11(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.12(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
 
   '@vue/compiler-core@3.4.31':
@@ -10587,7 +10587,7 @@ snapshots:
   mdast-util-definitions@6.0.0:
     dependencies:
       '@types/mdast': 4.0.3
-      '@types/unist': 3.0.3
+      '@types/unist': 3.0.2
       unist-util-visit: 5.0.0
 
   mdast-util-directive@3.0.0:
@@ -10605,7 +10605,7 @@ snapshots:
 
   mdast-util-find-and-replace@3.0.1:
     dependencies:
-      '@types/mdast': 4.0.4
+      '@types/mdast': 4.0.3
       escape-string-regexp: 5.0.0
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
@@ -10630,7 +10630,7 @@ snapshots:
   mdast-util-from-markdown@2.0.0:
     dependencies:
       '@types/mdast': 4.0.3
-      '@types/unist': 3.0.3
+      '@types/unist': 3.0.2
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
@@ -10721,7 +10721,7 @@ snapshots:
   mdast-util-to-markdown@2.1.0:
     dependencies:
       '@types/mdast': 4.0.3
-      '@types/unist': 3.0.3
+      '@types/unist': 3.0.2
       longest-streak: 3.1.0
       mdast-util-phrasing: 4.0.0
       mdast-util-to-string: 4.0.0
@@ -11085,7 +11085,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.7
+      debug: 4.3.6
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -11107,7 +11107,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.7
+      debug: 4.3.6
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.0
@@ -12576,7 +12576,7 @@ snapshots:
 
   unist-util-stringify-position@4.0.0:
     dependencies:
-      '@types/unist': 3.0.3
+      '@types/unist': 3.0.2
 
   unist-util-visit-parents@6.0.1:
     dependencies:
@@ -12656,7 +12656,7 @@ snapshots:
 
   vfile-message@4.0.2:
     dependencies:
-      '@types/unist': 3.0.3
+      '@types/unist': 3.0.2
       unist-util-stringify-position: 4.0.0
 
   vfile@6.0.1:
