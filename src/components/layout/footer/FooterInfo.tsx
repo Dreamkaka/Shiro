@@ -15,6 +15,8 @@ import { defaultLinkSections } from './config'
 // import { footerConfig } from './config'
 import { GatewayInfo } from './GatewayInfo'
 import { OwnerName } from './OwnerName'
+import RunningTime from './time'
+import VoyagerDistance from './Voyager'
 
 // const isVercelEnv = !!process.env.NEXT_PUBLIC_VERCEL_ENV
 export const FooterInfo = () => {
@@ -201,8 +203,9 @@ const FooterBottom = async () => {
           </SubscribeTextButton>
         </span>
         <span className="mt-3 block md:mt-0 md:inline">
-          Programming for the charm of words, coding to draw the magnificent
-          scenery.
+          我忘却了所有悲剧，所见之处皆是奇迹
+          <RunningTime />
+          <VoyagerDistance />
         </span>
       </p>
 
