@@ -204,10 +204,15 @@ const FooterBottom = async () => {
         </span>
         <span className="mt-3 block md:mt-0 md:inline">
           我忘却了所有悲剧，所见之处皆是奇迹
-          <RunningTime />
-          <VoyagerDistance />
         </span>
       </p>
+
+      <span>
+        <RunningTime />
+      </span>
+      <span>
+        <VoyagerDistance />
+      </span>
 
       <div>
         <PoweredBy className="my-3 block md:my-0 md:inline" />
