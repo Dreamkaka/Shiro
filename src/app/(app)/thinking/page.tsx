@@ -44,7 +44,7 @@ export default function Page() {
   return (
     <div>
       <header className="prose">
-        <h1>思考</h1>
+        <h1>说说</h1>
         <h3>谢谢你听我诉说</h3>
       </header>
 
@@ -99,7 +99,7 @@ const PostBox = () => {
           handleSend()
         }}
       >
-        <div className="absolute bottom-2 right-2 flex size-5 center">
+        <div className="center absolute bottom-2 right-2 flex size-5">
           <MotionButtonBase
             onClick={() => handleSend()}
             disabled={value.length === 0 || isPending}
@@ -250,7 +250,7 @@ const List = () => {
                 <div
                   className={clsx(
                     'mt-4 space-x-8 opacity-50 duration-200 hover:opacity-100',
-                    '[&_button:hover]:text-accent [&_button]:inline-flex [&_button]:space-x-1 [&_button]:text-sm [&_button]:center',
+                    '[&_button]:center [&_button:hover]:text-accent [&_button]:inline-flex [&_button]:space-x-1 [&_button]:text-sm',
                     '[&_button]:-my-5 [&_button]:-ml-5 [&_button]:p-5',
                   )}
                 >

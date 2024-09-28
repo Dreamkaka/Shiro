@@ -336,7 +336,7 @@ const FormModal = () => {
         },
         {
           validator: (value: string) => value.length <= 20,
-          message: '站点标题不能超过20个字符',
+          message: '站点标题不能超过20个字符哦',
         },
       ],
     },
