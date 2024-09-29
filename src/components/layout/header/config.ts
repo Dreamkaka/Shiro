@@ -88,7 +88,7 @@ export const headerMenuConfig: IHeaderMenu[] = [
     path: '#',
     subMenu: [
       {
-        title: '思考',
+        title: '说说',
         icon: h(MdiLightbulbOn20),
         path: '/thinking',
       },
