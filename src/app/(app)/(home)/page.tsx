@@ -10,6 +10,7 @@ import { createElement } from 'react'
 import { ErrorBoundary } from '~/components/common/ErrorBoundary'
 import {
   FaSolidComments,
+  FaSolidDotCircle,
   FaSolidFeatherAlt,
   FaSolidHistory,
   FaSolidUserFriends,
@@ -237,6 +238,11 @@ const windsock = [
     title: '朋友们',
     icon: FaSolidUserFriends,
     path: '/friends',
+  },
+  {
+    title: '朋友圈',
+    icon: FaSolidDotCircle,
+    path: '/pyq',
   },
   {
     title: '写下一点思考',
