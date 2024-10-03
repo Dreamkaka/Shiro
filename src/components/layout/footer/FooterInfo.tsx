@@ -123,7 +123,7 @@ const PoweredBy: Component = ({ className }) => {
         mobileAsSheet
         type="tooltip"
         triggerElement={
-          <StyledLink href="https://github.com/innei/Shiro" target="_blank">
+          <StyledLink href="https://github.com/Dreamkaka/Shiro" target="_blank">
             Shiro
           </StyledLink>
         }
@@ -186,7 +186,7 @@ const FooterBottom = async () => {
         <a href="/">
           <OwnerName />
         </a>
-        <span>.</span>
+        <span>. All rights reserved.</span>
         <span>
           <Divider />
           <a href="/feed" target="_blank" rel="noreferrer">
