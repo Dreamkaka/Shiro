@@ -220,7 +220,7 @@ const SayHi = () => {
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #39C5BB;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )
-      console.log(`Goodbye world`)
+      console.log(`ありがとうございます,Goodbye world`)
 
       const motto = `
 This Personal Space Powered By Mix Space.
