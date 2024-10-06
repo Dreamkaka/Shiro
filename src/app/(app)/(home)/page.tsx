@@ -143,6 +143,7 @@ const Hero = () => {
           >
             <span className="opacity-80">{description}</span>
           </BottomToUpTransitionView>
+
           <ul className="center mx-[60px] mt-8 flex flex-wrap gap-6 lg:mx-auto lg:mt-28 lg:justify-start lg:gap-4">
             {Object.entries(socialIds || noopObj).map(
               ([type, id]: any, index) => {
@@ -191,7 +192,7 @@ const Hero = () => {
             <Hitokoto />
           </small>
           <span className="mt-8 animate-bounce">
-            <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
+            <i className="i-mingcute-right-line rotate-90 text-2xl" />
           </span>
         </m.div>
       </TwoColumnLayout>
@@ -281,7 +282,7 @@ const Windsock = () => {
     <>
       <div className="center mt-28 flex flex-col">
         <div className="my-5 text-2xl font-medium">风向标</div>
-        <div className="mb-24 opacity-90">去到别处看看？</div>
+        <div className="mb-24 opacity-90">去到别去看看？</div>
         <ul className="flex flex-col flex-wrap gap-2 gap-y-8 opacity-80 lg:flex-row">
           {windsock.map((item, index) => {
             return (
@@ -342,10 +343,10 @@ const Windsock = () => {
                 })
               })
 
-            toast('ありがとう！', undefined, {
+            toast('谢谢你！', undefined, {
               iconElement: (
                 <m.i
-                  className="icon-[mingcute--heart-fill] text-uk-red-light"
+                  className="i-mingcute-heart-fill text-uk-red-light"
                   initial={{
                     scale: 0.96,
                   }}
@@ -363,7 +364,7 @@ const Windsock = () => {
             })
           }}
         >
-          喜欢本站 <i className="icon-[mingcute--heart-fill]" />{' '}
+          喜欢本站 <i className="i-mingcute-heart-fill" />{' '}
           <NumberSmoothTransition>
             {count as any as string}
           </NumberSmoothTransition>
@@ -376,7 +377,7 @@ const Windsock = () => {
           }}
         >
           订阅
-          <i className="icon-[material-symbols--notifications-active]" />
+          <i className="i-material-symbols-notifications-active" />
         </StyledButton>
       </div>
     </>
