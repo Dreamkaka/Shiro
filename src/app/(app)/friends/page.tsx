@@ -100,7 +100,9 @@ export default function Page() {
           <>
             <Collapse
               title={
-                <div className="mt-8 font-bold">以下站点无法访问，已失联</div>
+                <div className="mt-8 font-bold">
+                  以下站点无法访问，已失联，希望站长能尽快修复
+                </div>
               }
             >
               <OutdateSection data={outdated} />
@@ -111,7 +113,9 @@ export default function Page() {
           <>
             <Collapse
               title={
-                <div className="mt-8 font-bold">以下站点不合规，已被禁止</div>
+                <div className="mt-8 font-bold">
+                  以下站点违反了友链申请规则，已被禁止
+                </div>
               }
             >
               <BannedSection data={banned} />
@@ -272,7 +276,8 @@ const ApplyLinkInfo: FC = () => {
         <Markdown>
           {[
             `- 申请友链前请**务必确保**贵站有我站的友链，若审批通过后移除本站链接，本站也将移除友链，并加入黑名单。`,
-            `- 若站点长时间无法访问，我会删除您的友链，恢复后可再次申请。`,
+            `- 若站点长时间无法访问，我会暂时删除您的友链，恢复后可再次申请。`,
+            `- 网站现在可以在中国大陆区域正常访问`,
             `- 确保您的网站不存在政治敏感问题及违法内容。没有过多的广告、无恶意软件、脚本。且转载文章须注明出处。`,
             `- 确保站点全局启用 HTTPS`,
             `- 您需要有自己的独立域名，暂且不同意公有子域名或免费域名的友链申请 (如 github.io, vercel.app, eu.org, js.cool, .tk, .ml, .cf 等)`,
@@ -332,7 +337,7 @@ const FormModal = () => {
       rules: [
         {
           validator: (value: string) => !!value,
-          message: '站点标题不能为空',
+          message: '站点标题不能为空哦',
         },
         {
           validator: (value: string) => value.length <= 20,

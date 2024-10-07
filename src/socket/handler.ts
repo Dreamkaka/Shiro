@@ -13,10 +13,7 @@ import type { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.
 import React from 'react'
 
 import { setOnlineCount } from '~/atoms'
-import {
-  setActivityMediaInfo,
-  setActivityProcessInfo,
-} from '~/atoms/activity'
+import { setActivityMediaInfo, setActivityProcessInfo } from '~/atoms/activity'
 import {
   FaSolidFeatherAlt,
   IcTwotoneSignpost,
@@ -84,7 +81,7 @@ export const eventHandler = (
         Reflect.deleteProperty(nextPost, 'category')
         Object.assign(draft, nextPost)
       })
-      toast('文章已更新')
+      toast('文章更新了喵')
       trackerRealtimeEvent()
 
       if (currentData.text !== post.text) {
@@ -105,7 +102,7 @@ export const eventHandler = (
         getGlobalCurrentPostData()?.id === post.id
       ) {
         router.replace(routeBuilder(Routes.PageDeletd, {}))
-        toast.error('文章已删除')
+        toast.error('文章被主人删除了喵')
         trackerRealtimeEvent()
       }
 
@@ -124,7 +121,7 @@ export const eventHandler = (
       setCurrentNoteData((draft) => {
         Object.assign(draft.data, note)
       })
-      toast('手记已更新')
+      toast('手记已更新喵')
       trackerRealtimeEvent()
 
       if (currentData.text !== note.text) {
@@ -144,7 +141,7 @@ export const eventHandler = (
         getCurrentNoteData()?.data.id === note.id
       ) {
         router.replace(routeBuilder(Routes.PageDeletd, {}))
-        toast.error('手记已删除')
+        toast.error('手记不见了喵')
         trackerRealtimeEvent()
       }
 
@@ -158,7 +155,7 @@ export const eventHandler = (
         setCurrentPageData((draft) => {
           Object.assign(draft, data)
         })
-        toast('页面已更新')
+        toast('页面已更新喵')
         trackerRealtimeEvent()
       }
       break
@@ -167,9 +164,9 @@ export const eventHandler = (
     case EventTypes.NOTE_CREATE: {
       const { title, nid } = data as NoteModel
 
-      toast.success(`有新的内容发布了：「${title}」`, {
+      toast.success(`有新的内容发布了喵：「${title}」`, {
         onClick: () => {
-          window.peek(`/notes/${nid}`)
+          globalThis.peek(`/notes/${nid}`)
         },
         iconElement: React.createElement(FaSolidFeatherAlt),
         autoClose: false,
@@ -183,7 +180,7 @@ export const eventHandler = (
       const { title, category, slug } = data as PostModel
       toast.success(`有新的内容发布了：「${title}」`, {
         onClick: () => {
-          window.peek(`/posts/${category.slug}/${slug}`)
+          globalThis.peek(`/posts/${category.slug}/${slug}`)
         },
         iconElement: React.createElement(IcTwotoneSignpost),
       })
@@ -205,13 +202,16 @@ export const eventHandler = (
         //   },
         // )
       } else {
-        toast.success(`写下一点小思考：\n${(data as RecentlyModel).content}`, {
-          autoClose: 10000,
-          iconElement: React.createElement(MdiLightbulbOn20),
-          onClick: () => {
-            router.push(routeBuilder(Routes.Thinking, {}))
+        toast.success(
+          `写下了一点小思考：\n${(data as RecentlyModel).content}`,
+          {
+            autoClose: 10000,
+            iconElement: React.createElement(MdiLightbulbOn20),
+            onClick: () => {
+              router.push(routeBuilder(Routes.Thinking, {}))
+            },
           },
-        })
+        )
       }
       break
     }
@@ -299,7 +299,7 @@ export const eventHandler = (
     }
 
     case 'fn#shiro#update': {
-      toast.info('网站已更新，请刷新页面', {
+      toast.info('网站更新了，请刷新页面喵', {
         onClick: () => {
           location.reload()
         },
