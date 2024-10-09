@@ -178,7 +178,7 @@ export const eventHandler = (
 
     case EventTypes.POST_CREATE: {
       const { title, category, slug } = data as PostModel
-      toast.success(`有新的内容发布了：「${title}」`, {
+      toast.success(`有新的内容发布了喵：「${title}」`, {
         onClick: () => {
           globalThis.peek(`/posts/${category.slug}/${slug}`)
         },
