@@ -166,7 +166,7 @@ export const eventHandler = (
 
       toast.success(`有新的内容发布了：「${title}」`, {
         onClick: () => {
-          globalThis.peek(`/notes/${nid}`)
+          ;(globalThis as any).peek(`/notes/${nid}`)
         },
         iconElement: React.createElement(FaSolidFeatherAlt),
         autoClose: false,
@@ -180,7 +180,7 @@ export const eventHandler = (
       const { title, category, slug } = data as PostModel
       toast.success(`有新的内容发布了：「${title}」`, {
         onClick: () => {
-          globalThis.peek(`/posts/${category.slug}/${slug}`)
+          ;(globalThis as any).peek(`/posts/${category.slug}/${slug}`)
         },
         iconElement: React.createElement(IcTwotoneSignpost),
       })
