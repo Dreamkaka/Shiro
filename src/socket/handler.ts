@@ -81,7 +81,7 @@ export const eventHandler = (
         Reflect.deleteProperty(nextPost, 'category')
         Object.assign(draft, nextPost)
       })
-      toast('文章更新了喵')
+      toast('文章已更新喵')
       trackerRealtimeEvent()
 
       if (currentData.text !== post.text) {
@@ -202,16 +202,13 @@ export const eventHandler = (
         //   },
         // )
       } else {
-        toast.success(
-          `写下了一点小思考：\n${(data as RecentlyModel).content}`,
-          {
-            autoClose: 10000,
-            iconElement: React.createElement(MdiLightbulbOn20),
-            onClick: () => {
-              router.push(routeBuilder(Routes.Thinking, {}))
-            },
+        toast.success(`写下一点小思考：\n${(data as RecentlyModel).content}`, {
+          autoClose: 10000,
+          iconElement: React.createElement(MdiLightbulbOn20),
+          onClick: () => {
+            router.push(routeBuilder(Routes.Thinking, {}))
           },
-        )
+        })
       }
       break
     }
@@ -299,7 +296,7 @@ export const eventHandler = (
     }
 
     case 'fn#shiro#update': {
-      toast.info('网站更新了，请刷新页面喵', {
+      toast.info('网站已更新，请刷新页面喵', {
         onClick: () => {
           location.reload()
         },
