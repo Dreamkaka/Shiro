@@ -80,6 +80,13 @@ export const headerMenuConfig: IHeaderMenu[] = [
     title: '友链',
     icon: h(FaSolidUserFriends),
     path: '/friends',
+    subMenu: [
+      {
+        title: '朋友圈',
+        icon: h(FaSolidDotCircle),
+        path: '/pyq',
+      },
+    ],
   },
 
   {
