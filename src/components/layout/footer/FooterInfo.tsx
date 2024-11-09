@@ -203,7 +203,7 @@ const FooterBottom = async () => {
           </SubscribeTextButton>
         </span>
         <span className="mt-3 block md:mt-0 md:inline">
-          我忘却了所有悲剧，所见之处皆是奇迹
+          见过沧海桑田，望过白日飞升，走过拙山枯水，笑过月隐晦明
         </span>
       </p>
 

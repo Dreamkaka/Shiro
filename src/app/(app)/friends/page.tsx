@@ -100,9 +100,7 @@ export default function Page() {
           <>
             <Collapse
               title={
-                <div className="mt-8 font-bold">
-                  以下站点无法访问，已失联，希望站长能尽快修复
-                </div>
+                <div className="mt-8 font-bold">以下站点无法访问，已失联</div>
               }
             >
               <OutdateSection data={outdated} />

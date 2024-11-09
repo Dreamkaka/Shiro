@@ -49,3 +49,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap");
+  font-weight: normal;
+  font-style: normal;
+}
