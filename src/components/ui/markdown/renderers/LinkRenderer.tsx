@@ -8,6 +8,7 @@ import { GitHubBrandIcon } from '~/components/icons/platform/GitHubBrandIcon'
 import { BlockLoading } from '~/components/modules/shared/BlockLoading'
 import {
   getTweetId,
+  isBangumiUrl,
   isBilibiliVideoUrl,
   isCodesandboxUrl,
   isGistUrl,
@@ -142,6 +143,16 @@ export const BlockLinkRenderer = ({
         )
 
       return fallbackElement
+    }
+
+    case isBangumiUrl(url): {
+      return (
+        <LinkCard
+          fallbackUrl={url.toString()}
+          source={LinkCardSource.Bangumi}
+          id={url.pathname.slice(1)}
+        />
+      )
     }
 
     case isLeetCodeUrl(url): {
