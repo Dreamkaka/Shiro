@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import * as React from 'react'
+import { useEffect, useState } from 'react'
 
 const VoyagerDistance: React.FC = () => {
   const [distance, setDistance] = useState<number>(0)
@@ -37,7 +38,7 @@ const VoyagerDistance: React.FC = () => {
     <div>
       <p>
         旅行者 1 号当前距离地球 {distance.toLocaleString()} 千米，约为{' '}
-        {astronomicalUnits.toFixed(2)} 个天文单位.
+        {astronomicalUnits.toFixed(2)} 个天文单位。愿此行，终抵群星
       </p>
     </div>
   )

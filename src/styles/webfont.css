@@ -56,3 +56,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'BenderLight';
+  src: url("https://cdn.jsdelivr.net/gh/TimWangZi/The-font-of-Arknights@master/font/Bender/BENDER.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
